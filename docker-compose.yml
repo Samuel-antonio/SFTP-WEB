@@ -1,0 +1,15 @@
+version: '3'
+services:
+  sftpsrv01:
+    build:
+      context: .
+    container_name: sftpsrv01
+    ports:
+      - "2222:22"
+      - "10000:10000"
+    volumes:
+      - sftp-data:/home/
+
+volumes:
+  sftp-data:
+    driver: local

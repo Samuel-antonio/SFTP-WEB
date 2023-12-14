@@ -1,0 +1,19 @@
+ChallengeResponseAuthentication no
+UsePAM no
+PrintMotd no
+X11Forwarding no
+AllowTcpForwarding no
+AllowAgentForwarding no
+PermitTunnel no
+
+Subsystem sftp internal-sftp
+Match Group sftp
+    ChrootDirectory /home/sftp
+    X11Forwarding no
+    AllowTcpForwarding no
+    AllowAgentForwarding no
+    PermitTunnel no
+    ForceCommand internal-sftp
+    PasswordAuthentication yes
+    PermitRootLogin yes
+
